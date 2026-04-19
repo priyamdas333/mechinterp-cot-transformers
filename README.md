@@ -82,7 +82,7 @@ Open `notebooks/CoT_Mechanistic_Study.ipynb` in Google Colab with a T4 GPU. The 
 
 
 
-```
+
 
 ---
 
