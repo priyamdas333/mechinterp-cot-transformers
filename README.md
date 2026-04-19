@@ -31,9 +31,6 @@ CoT:     23 + 48 = 3+8=11, write 1 carry 1; 2+4+1=7 → 71
 
 ## Results
 
-<p align="center">
-  <img src="figures/fig2_causal_interventions.png" width="700" alt="Causal intervention results"/>
-</p>
 
 | Intervention | CoT Accuracy |
 |:------------|:------------|
@@ -45,9 +42,7 @@ CoT:     23 + 48 = 3+8=11, write 1 carry 1; 2+4+1=7 → 71
 
 **Interpretation:** Reasoning tokens are causally necessary — the model cannot bypass them. The carry sub-step is the most critical component, which aligns with it being the algorithmic bottleneck (information propagation from ones to tens column).
 
-<p align="center">
-  <img src="figures/fig6_summary_dashboard.png" width="750" alt="Summary dashboard"/>
-</p>
+
 
 ---
 
@@ -58,29 +53,21 @@ CoT:     23 + 48 = 3+8=11, write 1 carry 1; 2+4+1=7 → 71
 ├── requirements.txt
 ├── LICENSE
 │
-├── src/                            # Core modules
-│   ├── data_generation.py          # Synthetic arithmetic data (direct + CoT)
-│   ├── dataset.py                  # Tokenization + HuggingFace dataset prep
-│   ├── training.py                 # LossTrackingTrainer + training loop
-│   └── evaluation.py               # Autoregressive generation + exact-match accuracy
+├── src/                            
+│   ├── data_generation.py          
+│   ├── dataset.py                  
+│   ├── training.py                 
+│   └── evaluation.py               
 │
-├── analysis/                       # Mechanistic analysis modules
-│   ├── attention_analysis.py       # Token categorization + attention flow measurement
-│   ├── logit_lens.py               # Layer-wise prediction probing
-│   ├── causal_interventions.py     # 5 intervention types + embedding corruption
-│   ├── representation_analysis.py  # PCA of hidden states by token category
-│   └── visualize.py                # All plotting functions
+├── analysis/                       
+│   ├── attention_analysis.py      
+│   ├── logit_lens.py               
+│   ├── causal_interventions.py      
+│   └── visualize.py              
 │
 ├── notebooks/
-│   └── CoT_Mechanistic_Study.ipynb # Complete Colab notebook (runs end-to-end)
+│   └── CoT_Mechanistic_Study.ipynb
 │
-├── figures/                        # Generated figures
-│   ├── fig1_training_curves.png
-│   ├── fig2_causal_interventions.png
-│   ├── fig3_attention_patterns.png
-│   ├── fig4_logit_lens.png
-│   ├── fig5_partial_ablation.png
-│   └── fig6_summary_dashboard.png
 │
 └── checkpoints/                    # Saved models (git-ignored, created at runtime)
 ```
@@ -93,7 +80,6 @@ CoT:     23 + 48 = 3+8=11, write 1 carry 1; 2+4+1=7 → 71
 
 Open `notebooks/CoT_Mechanistic_Study.ipynb` in Google Colab with a T4 GPU. The notebook runs end-to-end in ~30–45 minutes and produces all figures.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Unity333A/cot-mechanistic-study/blob/main/notebooks/CoT_Mechanistic_Study.ipynb)
 
 ### Option 2: Run Modular Pipeline
 
