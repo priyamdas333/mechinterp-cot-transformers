@@ -69,7 +69,7 @@ CoT:     23 + 48 = 3+8=11, write 1 carry 1; 2+4+1=7 → 71
 │   └── CoT_Mechanistic_Study.ipynb
 │
 │
-└── checkpoints/                    # Saved models (git-ignored, created at runtime)
+└── checkpoints/                   
 ```
 
 ---
@@ -81,20 +81,7 @@ CoT:     23 + 48 = 3+8=11, write 1 carry 1; 2+4+1=7 → 71
 Open `notebooks/CoT_Mechanistic_Study.ipynb` in Google Colab with a T4 GPU. The notebook runs end-to-end in ~30–45 minutes and produces all figures.
 
 
-### Option 2: Run Modular Pipeline
 
-```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Run full pipeline
-python run.py
-
-# With custom settings
-python run.py --epochs 3 --batch-size 8 --intervention-samples 100
-
-# Skip training, only run analysis (requires saved models in checkpoints/)
-python run.py --analysis-only
 ```
 
 ---
@@ -153,6 +140,3 @@ python run.py --analysis-only
 
 ---
 
-## License
-
-MIT License — see [LICENSE](LICENSE) for details.
